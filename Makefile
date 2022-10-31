@@ -18,7 +18,7 @@ else
 		CFLAGS2 = 
 		LIBPATH = /usr/local/lib
 		INCPATH = /usr/local/include
-		PY_LIBS = -lm $(LIBPATH)/libcfitsio.so $(LIBPATH)/libfftw3.so $(LIBPATH)/libgsl.so $(LIBPATH)/libgslcblas.so
+		PY_LIBS = -lm $(LIBPATH)/libcfitsio.so $(LIBPATH)/libfftw3.so $(LIBPATH)/libgsl.so $(LIBPATH)/libgslcblas.so -lz
 	else
 		CFLAGS2 = 
 		LIBPATH =
@@ -30,7 +30,7 @@ endif
 CC	= gcc
 CFLAGS	= -O2 -Wall -fPIC -I$(INCPATH)
 #LIBS    = -lm -lcfitsio -lfftw3 -lgsl -lgslcblas
-LIBS	= -lm $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a 
+LIBS	= -lm $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a -lz
 
 # for binary program
 BIN	= glafic
